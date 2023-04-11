@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+</head>
+
+<body>
+  <div class="boxtop">
+    <div id="main" class="content">
+      <div class="heading">
+        <h1>
+          <p>My<u style="font-size: 42px !important;">ToDo List</u></p>
+        </h1>
+      </div>
+
+      <!-- input form-->
+      <div id="taskadd" class="form">
+        <form action="{{ url_for('add') }}" method="POST">
+          <input type="text" class="form-input" placeholder="Add new task" name="content">
+          <div class="addbtn">
+            <button class="formbtn" value="Add" type="submit">ADD</button>
+          </div>
+        </form>
+      </div>
+
+      <!-- type selector -->
+      <div class="selector">
+        <p class="selector1">Filter</p>
+        <select class="selector1" id="selec">
+          <option value="1">All</option>
+          <option value="2">completed</option>
+          <option value="3">Active</option>
+          <option value="4">Due</option>
+        </select>
+      </div>
+
+      <!-- table of tasks -->
+      <div class="tab">
+        <table id="tab1">
+          <tr>
+            <th style="width: 80%;">Task</th>
+            <th>Time</th>
+            <th>Actions</th>
+          </tr>
+          {% for item in todoget %}
+            <tr id="tablist">
+              <td style="overflow: hidden;">
+                {{ item.content }}
+              </td>
+              <td style="font-size: 16px;">
+                {{ item.date_completed }}
+              </td>  
+              <td> 
+                {% if not item.completed %}
+                <a href="{{ url_for('complete', id=item.id) }}">Done</a><br>
+                {% endif %}
+                <a href="{{ url_for('delete', id=item.id) }}">Delete</a><br>
+              </td>
+            </tr>
+          {% endfor %}
+
+        </table>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

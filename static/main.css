@@ -1,0 +1,119 @@
+* {
+    margin:5px;  
+}
+#main{
+    padding:20px;
+    border-radius: 5px;
+    background-color: rgb(208, 210, 212);
+    box-shadow: 0 2px 15px -3px #888888;
+    height:640px;
+}
+.heading{
+    color:rgb(21, 158, 243);
+    font-size:x-large;
+    text-align:center;
+    margin: 50px;
+}
+#taskadd{
+    box-shadow: 0 2px 15px -3px #888888;
+    border-radius: 8px;
+    background-color: white;
+    display: block;
+    width: 500px;
+    position: absolute;
+    left: 48%;
+    transform: translate(-54% ,-80%);
+    margin: 50px;
+    height: 40px;
+    padding: 10px;
+    transition: 0.2s;
+}
+#taskadd:hover{
+    box-shadow: 0 2px 15px 2px #888888;
+}
+.form-input{
+    float: left;
+    background-color: inherit;
+    border: none;
+    font-size: x-large;
+}
+.form-input:focus,
+.form-input:active{
+    outline: none !important;
+    
+}
+.formbtn{
+    background-color: rgba(37, 138, 221, 0.5);
+    border-radius: 6px;
+    border: none;
+    text-align: center;
+    font-size: 12px;
+    padding:15px;
+    width:80px;
+    display: block;
+    position: absolute;
+    transform: translate(510%,-28%);
+    box-shadow: 0 2px 15px -1px #888888;
+    transition-duration: 0.3s;
+}
+.formbtn:hover{
+   
+    width:80px;
+    box-shadow: 0 2px 15px -5px #888888;
+}
+
+.selector{
+    float: right;
+    margin-top: 150px;
+    margin-right: 90px;
+    
+}
+.selector1{
+    display: inline-block;
+    /* padding-left: 15px; */
+}
+
+#selec{
+    padding: 6px;
+    border-radius: 2px;
+    font-size: 15px;
+    width: 170px;
+}
+.selector p{
+    font-size: 19px;
+}
+/* .form-input:placeholder{
+    padding: 20px;
+} */
+/* .tab{
+    background-color: white;
+
+} */
+table, th, td{
+    /* border: 1px solid black; */
+    border-collapse: collapse;
+    
+}
+/* #tablist{
+    overflow-y:scroll;
+    height:260px;
+ 
+} */
+
+.tab{
+    width:800px;
+    /* background-color: white; */
+    position: absolute;
+    transform: translate(30%,35%);
+    border-radius: 20px;
+    /* max-height: 100px;
+    overflow-y:auto; */
+    overflow-y:scroll;
+    height:350px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 24px;
+}
+
+td{
+    padding: 8px 20px;
+}
