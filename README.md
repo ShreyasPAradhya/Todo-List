@@ -1,6 +1,8 @@
 This is a simple Todo list app under development.
 Created with Flask, Sqlite, Html, CSS & Bootstrap.
 
+###A cry to make Heroku free again##
+
 Many more features comming soon!😄.
 
 The significance of this project is that I got stuck with a simple error for days 🤧😢.
